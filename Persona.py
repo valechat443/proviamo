@@ -1,8 +1,9 @@
 class Persona:
-    def __init__(self, nome:str, cognome:str, eta:int, altezza: float):
+    def __init__(self, nome:str, cognome:str, eta:int, nazionalita:str, altezza: float):
         self.__nome = nome
         self.__cognome = cognome
         self.__eta = eta
+        self.__nazionalita = nazionalita
         self.__altezza = altezza
         
     def getNome(self):
@@ -13,6 +14,9 @@ class Persona:
     
     def getEta(self):
         return self.__eta
+    
+    def getNazionalita(self):
+        return self.__nazionalita
     
     def getAltezza(self):
         return self.__altezza
@@ -28,9 +32,12 @@ class Persona:
     
     def setAltezza(self, altezza):
         self.__altezza = altezza
+        
+    def setNazionalita(self, nazionalita):
+        self.__nazionalita = nazionalita
     
     def getAltezzaInPiedi(self):
         return self.__altezza*0.0328084
         
     def __str__(self) :
-        return "Nome: " + self.__nome + "\nCognome: "+ self.__cognome + "\nEtà: " + str(self.__eta) + "\nAltezza in cm: " + str(self.__altezza)
+        return "Nome: " + self.__nome + "\nCognome: "+ self.__cognome + "\nEtà: " + str(self.__eta) +"\nnazionalita: "+self.__nazionalita+ "\nAltezza in cm: " + str(self.__altezza)
