@@ -1,9 +1,10 @@
 class Persona:
-    def __init__(self, nome:str, cognome:str, eta:int, altezza: float,colorCapelli,colorOcchi) :
+    def __init__(self, nome:str, cognome:str, eta:int, nazionalita:str, altezza: float,colorCapelli:str,colorOcchi:str) :
         self.__nome=nome
         self.__cognome=cognome
         self.__eta = eta
         self.__altezza = altezza
+        self.__nazionalita = nazionalita
         self.__coloreCapelli=colorCapelli
         self.__coloreOcchi=colorOcchi
         
@@ -13,6 +14,8 @@ class Persona:
         return self.__cognome
     def getEta(self):
         return self.__eta
+    def getNazionalita(self):
+        return self.__nazionalita
     def getAltezza(self):
         return self.__altezza
     def getColoreOcchi(self):
@@ -28,6 +31,8 @@ class Persona:
         self.__eta = eta
     def setAltezza(self, altezza):
         self.__altezza = altezza
+    def setNazionalita(self, nazionalita):
+        self.__nazionalita = nazionalita
     def getAltezzaInPiedi(self):
         return self.__altezza*0.0328084
     def setColoreCapelli(self, colCapel):
@@ -38,5 +43,4 @@ class Persona:
 
         
     def __str__(self) :
-        return "Nome: " + self.__nome + "\nCognome: "+ self.__cognome + "\nEtà: " + str(self.__eta) + "\nAltezza in cm: " + str(self.__altezza)
-
+        return "Nome: " + self.__nome + "\nCognome: "+ self.__cognome + "\nEtà: " + str(self.__eta) +"\nnazionalita: "+self.__nazionalita+ "\nAltezza in cm: " + str(self.__altezza)
